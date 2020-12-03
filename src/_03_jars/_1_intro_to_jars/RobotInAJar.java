@@ -1,10 +1,11 @@
 package _03_jars._1_intro_to_jars;
 
+import org.jointheleague.graphical.robot.Robot;
 
 public class RobotInAJar {
 	
 	/* 1.   Create a String variable and initialize it to your name  */
-	
+	String Leighton;
 	
 	/* If you did not make any syntax errors, there should be no red lines under your code. 
 	 * This is because the type String is part of the basic Java language that all programs  
@@ -12,7 +13,7 @@ public class RobotInAJar {
 	
 	
 	/* 2.   Now declare a Robot variable and create a new Robot  */
-
+	Robot rob = new Robot();
 	
 	/* Even if you did not make any syntax errors, there should be a red line under the word Robot.
 	 * This is because the type Robot is not part of the basic Java language. If you want to use 
@@ -35,7 +36,7 @@ public class RobotInAJar {
 	  * 
 	  * Go to https://github.com/jointheleague/league-jars and download the robot.jar file from GitHub
 	  */ 
-
+	
 	 /* 4.  Put the Robot JAR into this project */
   	 /* HOW?
 	 *  Drag the robot.jar file you downloaded from GitHub and drop it onto Eclipse, onto the current Java project.
@@ -58,7 +59,13 @@ public class RobotInAJar {
 	
 	public void draw() {
 		/*** Write code to make your robot draw a shape here ****/
-		
+		rob.setSpeed(10);
+		rob.penDown();
+		rob.setPenColor(0,0,255);
+		for(int i = 0; i < 4; i++) {
+			rob.move(100);
+			rob.turn(90);
+		}
 		
 	}
 }
